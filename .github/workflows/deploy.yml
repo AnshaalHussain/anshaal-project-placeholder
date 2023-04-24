@@ -44,7 +44,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Configure SSH
-            run: |
+               run: |
                 mkdir -p ~/.ssh/
                 echo "$SSH_PRIVATE_KEY" > ~/.ssh/deploy-key.pem
                 chmod 600 ~/.ssh/deploy-key.pem
@@ -56,7 +56,7 @@ jobs:
                     IdentityFile ~/.ssh/deploy-key.pem
                     StrictHostKeyChecking no
                 END
-            env:
+               env:
                 SSH_USER: ${{ secrets.SSH_USER }}
                 SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
                 SSH_IP: ${{ secrets.SSH_IP }}

@@ -33,7 +33,7 @@ class TimelinePost(Model):
 
 mydb.connect()
 mydb.create_tables([TimelinePost])
-mydb.close()
+# mydb.close()
 
 
 @app.before_first_request

@@ -36,15 +36,15 @@ mydb.create_tables([TimelinePost])
 # mydb.close()
 
 
-@app.before_first_request
-def _db_connect():
-    mydb.connect()
+# @app.before_first_request
+# def _db_connect():
+#     mydb.connect()
 
 
-@app.teardown_request
-def _db_close(exc):
-    if not mydb.is_closed():
-        mydb.close()
+# @app.teardown_request
+# def _db_close(exc):
+#     if not mydb.is_closed():
+#         mydb.close()
 
 
 @app.route('/')

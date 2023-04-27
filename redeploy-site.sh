@@ -2,9 +2,11 @@
 
 
 # Docker Container Deployment:
+WD=$PWD
 
 # cd into your project folder
-cd "~/anshaal-project-placeholder";
+cd "/root/anshaal-project-placeholder";
+
 # can remove all containers and images with prune
 
 # make sure the git repo inside VPS has the latest changes from main
@@ -15,6 +17,8 @@ docker compose -f docker-compose.prod.yml down
 
 # Run
 docker compose -f docker-compose.prod.yml up -d --build --detach
+
+cd $WD
 
 
 # tmux kill-server;
